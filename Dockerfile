@@ -13,6 +13,7 @@ RUN yarn install
 COPY . .
 
 # Build the application
+
 RUN yarn build
 
 # Expose the port your app runs on
