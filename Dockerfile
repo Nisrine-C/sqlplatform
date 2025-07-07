@@ -8,12 +8,6 @@ WORKDIR /src
 COPY package*.json ./
 RUN yarn install
 
-# Copy Prisma files
-COPY prisma ./prisma
-
-# Generate client and apply migrations
-RUN npx prisma generate
-RUN npx prisma migrate deploy
 
 # Copy the entire application code
 COPY . .
