@@ -30,6 +30,7 @@ export function Waitlist() {
     "Belgium",
     "Ireland",
     "New Zealand",
+    "Morocco",
     "South Korea",
     "Hong Kong",
     "UAE",
