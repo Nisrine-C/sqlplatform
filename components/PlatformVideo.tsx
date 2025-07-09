@@ -9,21 +9,17 @@ export default function PlatformVideo() {
             <div className="relative bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden aspect-video">
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-800/50">
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-zinc-200 transition-colors">
-                    <svg
-                      className="w-6 h-6 text-black ml-1"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-zinc-400 text-sm">
-                    Click to play demo video
-                  </p>
-                  <p className="text-zinc-500 text-xs mt-1">
-                    Video integration placeholder
-                  </p>
+                  <video
+                    controls
+                    preload="none"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  >
+                    <source src="/placeholder.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
             </div>

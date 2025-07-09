@@ -9,9 +9,9 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <img className="h-15 w-30" src="./Caplogo.svg" />
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="relative hidden md:flex items-center space-x-8">
             <Link href="#waitlist-section">
-              <Button className="bg-white text-black hover:bg-zinc-200 cursor-pointer">
+              <Button className="bg-white text-black hover:bg-zinc-200 cursor-pointer z-50">
                 Get Started
               </Button>
             </Link>

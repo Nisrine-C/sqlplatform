@@ -1,14 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { TrendingUp } from 'lucide-react';
-import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { TrendingUp } from "lucide-react";
+import Image from "next/image";
 export default function Analytics() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="lg:order-2">
+            <div className="relative lg:order-2">
               <Badge
                 variant="outline"
                 className="border-zinc-700 text-zinc-300 mb-4"
@@ -40,16 +40,19 @@ export default function Analytics() {
                   All In One Dashboard
                 </li>
               </ul>
-              <Button className="bg-white text-black hover:bg-zinc-200">
+              <Button className="bg-white text-black hover:bg-zinc-200 z-50">
                 View Analytics
               </Button>
             </div>
             <div className="lg:order-1 relative">
-            <div className="lg:order-1 relative">
+              <div className="lg:order-1 relative">
                 <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden transform -rotate-2 hover:-rotate-1 transition-transform duration-300 perspective-1000">
                   <div
                     className="relative bg-gradient-to-br from-zinc-900 to-black p-6 h-[500px] transform-gpu"
-                    style={{ transform: "perspective(1000px) rotateY(12deg) rotateX(-2deg)" }}
+                    style={{
+                      transform:
+                        "perspective(1000px) rotateY(12deg) rotateX(-2deg)",
+                    }}
                   >
                     {/* Dashboard Header */}
                     <div className="flex items-center justify-between mb-6">
@@ -68,12 +71,26 @@ export default function Analytics() {
                       {/* Signal Score */}
                       <div className="bg-zinc-800/50 rounded-lg p-4 border border-zinc-700">
                         <div className="flex items-center justify-between mb-3">
-                          <span className="text-zinc-400 text-sm">Signal Score</span>
-                          <div className="text-xs text-zinc-400 font-mono">+12.3%</div>
+                          <span className="text-zinc-400 text-sm">
+                            Signal Score
+                          </span>
+                          <div className="text-xs text-zinc-400 font-mono">
+                            +12.3%
+                          </div>
                         </div>
                         <div className="relative w-16 h-16 mx-auto mb-2">
-                          <svg className="w-full h-full transform -rotate-90" viewBox="0 0 64 64">
-                            <circle cx="32" cy="32" r="28" stroke="#374151" strokeWidth="6" fill="none" />
+                          <svg
+                            className="w-full h-full transform -rotate-90"
+                            viewBox="0 0 64 64"
+                          >
+                            <circle
+                              cx="32"
+                              cy="32"
+                              r="28"
+                              stroke="#374151"
+                              strokeWidth="6"
+                              fill="none"
+                            />
                             <circle
                               cx="32"
                               cy="32"
@@ -87,18 +104,26 @@ export default function Analytics() {
                             />
                           </svg>
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <span className="text-lg text-zinc-400 font-bold">87</span>
+                            <span className="text-lg text-zinc-400 font-bold">
+                              87
+                            </span>
                           </div>
                         </div>
-                        <div className="text-center text-xs text-zinc-500">Strong Signal</div>
+                        <div className="text-center text-xs text-zinc-500">
+                          Strong Signal
+                        </div>
                       </div>
 
                       {/* Priority Allocation */}
                       <div className="bg-zinc-800/50 rounded-lg p-4 border border-zinc-700">
-                        <div className="text-zinc-300 text-sm mb-3">Priority Allocation</div>
+                        <div className="text-zinc-300 text-sm mb-3">
+                          Priority Allocation
+                        </div>
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
-                            <span className="text-xs text-zinc-400">Equities</span>
+                            <span className="text-xs text-zinc-400">
+                              Equities
+                            </span>
                             <div className="flex items-center space-x-2">
                               <div className="w-12 h-1.5 bg-zinc-700 rounded-full overflow-hidden">
                                 <div className="w-8/12 h-full bg-zinc-400 rounded-full"></div>
@@ -131,16 +156,27 @@ export default function Analytics() {
                     {/* Success Rate Chart */}
                     <div className="bg-zinc-800/50 rounded-lg p-4 mb-4 border border-zinc-700">
                       <div className="flex justify-between items-center mb-3">
-                        <span className="text-zinc-400 font-medium">Success Rate Trend</span>
+                        <span className="text-zinc-400 font-medium">
+                          Success Rate Trend
+                        </span>
                         <span className="text-zinc-400 text-sm">73.2%</span>
                       </div>
 
                       {/* Mini Chart */}
                       <div className="relative h-20 mb-3">
-                        <svg className="w-full h-full" viewBox="0 0 200 80" preserveAspectRatio="none">
+                        <svg
+                          className="w-full h-full"
+                          viewBox="0 0 200 80"
+                          preserveAspectRatio="none"
+                        >
                           {/* Grid lines */}
                           <defs>
-                            <pattern id="analytics-grid" width="25" height="20" patternUnits="userSpaceOnUse">
+                            <pattern
+                              id="analytics-grid"
+                              width="25"
+                              height="20"
+                              patternUnits="userSpaceOnUse"
+                            >
                               <path
                                 d="M 25 0 L 0 0 0 20"
                                 fill="none"
@@ -150,7 +186,11 @@ export default function Analytics() {
                               />
                             </pattern>
                           </defs>
-                          <rect width="100%" height="100%" fill="url(#analytics-grid)" />
+                          <rect
+                            width="100%"
+                            height="100%"
+                            fill="url(#analytics-grid)"
+                          />
 
                           {/* Success rate line */}
                           <path
@@ -164,7 +204,13 @@ export default function Analytics() {
                           {/* Data points */}
                           <circle cx="50" cy="45" r="2" fill="#BAC4C8" />
                           <circle cx="100" cy="35" r="2" fill="#BAC4C8" />
-                          <circle cx="150" cy="25" r="2" fill="#BAC4C8" className="animate-pulse" />
+                          <circle
+                            cx="150"
+                            cy="25"
+                            r="2"
+                            fill="#BAC4C8"
+                            className="animate-pulse"
+                          />
                         </svg>
                       </div>
 
@@ -180,21 +226,32 @@ export default function Analytics() {
                     {/* Bottom Stats */}
                     <div className="grid grid-cols-3 gap-3">
                       <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700 text-center">
-                        <div className="text-zinc-400 font-bold text-lg">24.7%</div>
-                        <div className="text-xs text-zinc-400">Total Return</div>
+                        <div className="text-zinc-400 font-bold text-lg">
+                          24.7%
+                        </div>
+                        <div className="text-xs text-zinc-400">
+                          Total Return
+                        </div>
                       </div>
                       <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700 text-center">
-                        <div className="text-zinc-400 font-bold text-lg">1.84</div>
-                        <div className="text-xs text-zinc-400">Sharpe Ratio</div>
+                        <div className="text-zinc-400 font-bold text-lg">
+                          1.84
+                        </div>
+                        <div className="text-xs text-zinc-400">
+                          Sharpe Ratio
+                        </div>
                       </div>
                       <div className="bg-zinc-800/50 rounded-lg p-3 border border-zinc-700 text-center">
-                        <div className="text-zinc-400 font-bold text-lg">-2.1%</div>
-                        <div className="text-xs text-zinc-400">Max Drawdown</div>
+                        <div className="text-zinc-400 font-bold text-lg">
+                          -2.1%
+                        </div>
+                        <div className="text-xs text-zinc-400">
+                          Max Drawdown
+                        </div>
                       </div>
                     </div>
 
                     {/* Bottom indicators */}
-                    
                   </div>
                 </div>
               </div>
