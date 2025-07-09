@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   BarChart3,
   TrendingUp,
@@ -6,23 +6,19 @@ import {
   Shield,
   Brain,
   Activity,
-} from 'lucide-react';
+} from "lucide-react";
 export function Features() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              Predict The Markets
-            </h2>
-            <p className="text-zinc-400 text-lg">
-              Everything You Need
-            </p>
+            <h2 className="text-4xl font-bold mb-4">Predict The Markets</h2>
+            <p className="text-zinc-400 text-lg">Everything You Need</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {/* API Integration */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full font-mono">
@@ -39,20 +35,19 @@ export function Features() {
                         <span className="text-blue-400">POST</span> /cpq/orders
                       </div>
                       <div>
-                        <span className="text-green-400">GET</span>{' '}
+                        <span className="text-green-400">GET</span>{" "}
                         /cpq/positions
                       </div>
                       <div>
-                        <span className="text-purple-400">WS</span>{' '}
-                        /cpq/prices
+                        <span className="text-purple-400">WS</span> /cpq/prices
                       </div>
                     </div>
                     <div className="mt-3 text-xs">
-                      <div className="text-zinc-400">{'{'}</div>
+                      <div className="text-zinc-400">{"{"}</div>
                       <div className="ml-2 text-zinc-400">
                         "status": "success"
                       </div>
-                      <div className="text-zinc-400">{'}'}</div>
+                      <div className="text-zinc-400">{"}"}</div>
                     </div>
                   </div>
                 </div>
@@ -60,14 +55,14 @@ export function Features() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Proprietary API</h3>
                 <p className="text-zinc-400">
-                  Get access to the institutional-Grade, optimized CapQuant proprietary API.
+                  Get access to the institutional-Grade, optimized CapQuant
+                  proprietary API.
                 </p>
               </div>
             </div>
-            
 
             {/* AI-Powered Insights */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full">
@@ -113,7 +108,7 @@ export function Features() {
             </div>
 
             {/* Real-time Data */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full">
@@ -158,7 +153,7 @@ export function Features() {
             </div>
 
             {/* Advanced Backtesting */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full">
@@ -197,7 +192,7 @@ export function Features() {
             </div>
 
             {/* Portfolio Management */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full">
@@ -252,40 +247,43 @@ export function Features() {
               </div>
             </div>
 
-             {/* Enterprise Security */}
-             <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
-                <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
-                  <div className="absolute inset-4">
-                    <div className="bg-zinc-800 rounded-lg p-4 h-full">
-                      <div className="flex items-center justify-between mb-3">
-                        <Shield className="w-5 h-5 text-zinc-400" />
-                        <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
-                          <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
-                          <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
-                        </div>
+            {/* Enterprise Security */}
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
+              <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
+                <div className="absolute inset-4">
+                  <div className="bg-zinc-800 rounded-lg p-4 h-full">
+                    <div className="flex items-center justify-between mb-3">
+                      <Shield className="w-5 h-5 text-zinc-400" />
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
+                        <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
+                        <div className="w-2 h-2 bg-zinc-400 rounded-full"></div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="h-2 bg-zinc-700 rounded w-3/4"></div>
-                        <div className="h-2 bg-zinc-700 rounded w-1/2"></div>
-                        <div className="h-2 bg-zinc-700 rounded w-2/3"></div>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="h-2 bg-zinc-700 rounded w-3/4"></div>
+                      <div className="h-2 bg-zinc-700 rounded w-1/2"></div>
+                      <div className="h-2 bg-zinc-700 rounded w-2/3"></div>
+                    </div>
+                    <div className="mt-4 flex items-center space-x-2">
+                      <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
+                        <div className="w-2 h-2 bg-zinc-800 rounded-full"></div>
                       </div>
-                      <div className="mt-4 flex items-center space-x-2">
-                        <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
-                          <div className="w-2 h-2 bg-zinc-800 rounded-full"></div>
-                        </div>
-                        <div className="h-2 bg-zinc-700 rounded flex-1"></div>
-                      </div>
+                      <div className="h-2 bg-zinc-700 rounded flex-1"></div>
                     </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">Privacy & Security</h3>
-                  <p className="text-zinc-400">
-                    Institutional-grade security and encrypted data storage. Your data stays secure.
-                  </p>
-                </div>
               </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">
+                  Privacy & Security
+                </h3>
+                <p className="text-zinc-400">
+                  Institutional-grade security and encrypted data storage. Your
+                  data stays secure.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

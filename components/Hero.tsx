@@ -1,7 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Zap } from 'lucide-react';
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Zap } from "lucide-react";
+import Link from "next/link";
 export function Hero() {
   return (
     <section className="py-20 lg:py-32">
@@ -15,18 +15,18 @@ export function Hero() {
             Secure Your Spot
           </Badge>
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
-            Monetize
-            Your Mind
+            Monetize Your Mind
           </h1>
           <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          CapQuant is where serious players turn data into alpha. Submit your signals.  
-          Score your performance in real-time. Outperform and get rewards.
+            CapQuant is where serious players turn data into alpha. Submit your
+            signals. Score your performance in real-time. Outperform and get
+            rewards.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="relative flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#waitlist-section">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-zinc-200 text-lg px-8 cursor-pointer"
+                className="bg-white text-black hover:bg-zinc-200 text-lg px-8 cursor-pointer z-50 "
               >
                 Join the Waitlist
                 <ArrowRight className="w-5 h-5 ml-2" />
