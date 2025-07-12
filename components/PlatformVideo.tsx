@@ -9,14 +9,7 @@ export default function PlatformVideo() {
             <div className="relative bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden aspect-video">
               <div className="absolute inset-0 flex items-center justify-center bg-zinc-800/50">
                 <div className="text-center">
-                  <video
-                    controls
-                    preload="none"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                  >
+                  <video preload="none" autoPlay muted loop playsInline>
                     <source src="/placeholder.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
