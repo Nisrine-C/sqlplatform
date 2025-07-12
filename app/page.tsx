@@ -10,6 +10,7 @@ import { Navigation } from '@/components/Navigation';
 import PlatformVideo from '@/components/PlatformVideo';
 import StandalonePythonCodeBackground from '@/components/StandalonePythonCodeBackground';
 import { Stats } from '@/components/Stats';
+import { Footer } from '@/components/Footer';
 import StrategyBuilder from '@/components/StrategyBuilder';
 import { Waitlist } from '@/components/Waitlist';
 import Image from 'next/image';
@@ -26,6 +27,7 @@ export default function Home() {
       <ExecutionEngine />
       <Features />
       <Waitlist />
+      <Footer />
     </div>
   );
 }
