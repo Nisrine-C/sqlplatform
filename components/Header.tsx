@@ -1,9 +1,9 @@
-import { Button } from '@/components/ui/button';
-import { BarChart3 } from 'lucide-react';
-import Link from 'next/link';
+import { Button } from "@/components/ui/button";
+import { BarChart3 } from "lucide-react";
+import Link from "next/link";
 export default function Header() {
   return (
-    <header className="border-b border-zinc-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-zinc-800 bg-black/50 backdrop-blur-sm sticky top-0 z-100">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">

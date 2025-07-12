@@ -61,29 +61,6 @@ export function Waitlist() {
     e.preventDefault();
 
     try {
-      /* const res = await fetch("/api/waitlist", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        toast(data.error);
-        return;
-      }
-
-      toast.custom((t) => (
-        <div>
-          <h1>Information Submitted</h1>
-          <button onClick={() => toast.dismiss(t)}>Dismiss</button>
-        </div>
-      ));
-      /*
-      toast.success("Information Successfully Submitted", {
-        description: "Thank you for joining the waitlist!",
-      });*/
       toast.promise(
         fetch("/api/waitlist", {
           method: "POST",

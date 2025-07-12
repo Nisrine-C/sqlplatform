@@ -1,10 +1,10 @@
-import React from 'react';
-import { BarChart3 } from 'lucide-react';
-import Link from 'next/link';
+import React from "react";
+import { BarChart3 } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-800 py-12">
+    <footer className="border-t border-zinc-800 py-12 bg-black/50 backdrop-blur-sm ">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
