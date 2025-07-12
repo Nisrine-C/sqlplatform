@@ -8,7 +8,7 @@ export default function Analytics() {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="lg:order-2">
+            <div className="relative lg:order-2">
               <Badge
                 variant="outline"
                 className="border-zinc-700 text-zinc-300 mb-4"

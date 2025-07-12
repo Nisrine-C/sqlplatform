@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Mail, User, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Toaster, toast } from "sonner";
+import CustomToast from "./CustomToast";
 
 export function Waitlist() {
   const [formData, setFormData] = useState({
@@ -28,6 +30,7 @@ export function Waitlist() {
     "Belgium",
     "Ireland",
     "New Zealand",
+    "Morocco",
     "South Korea",
     "Hong Kong",
     "UAE",
@@ -58,7 +61,7 @@ export function Waitlist() {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/waitlist", {
+      /* const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -67,14 +70,55 @@ export function Waitlist() {
       const data = await res.json();
 
       if (!res.ok) {
-        alert("Error: " + data.error);
+        toast(data.error);
         return;
       }
 
-      alert("Thank you for joining the waitlist!");
+      toast.custom((t) => (
+        <div>
+          <h1>Information Submitted</h1>
+          <button onClick={() => toast.dismiss(t)}>Dismiss</button>
+        </div>
+      ));
+      /*
+      toast.success("Information Successfully Submitted", {
+        description: "Thank you for joining the waitlist!",
+      });*/
+      toast.promise(
+        fetch("/api/waitlist", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }).then(async (res) => {
+          if (!res.ok) {
+            const errorData = await res.json();
+            throw new Error(errorData.error || "Something went wrong");
+          }
+          return res.json();
+        }),
+        {
+          loading: "Loading...",
+          success: (data) => (
+            <div className="text-white ">
+              <div className="font-bold text-lg">
+                You've been added to the waitlist!
+              </div>
+              <div className="text-sm opacity-70">
+                Thanks for your submission.
+              </div>
+            </div>
+          ),
+          error: (data) => (
+            <div className="text-white">
+              <div className="font-bold text-lg">Unexpected error!</div>
+              <div className="text-sm opacity-70">{data.message}</div>
+            </div>
+          ),
+        }
+      );
       setFormData({ name: "", email: "", phone: "", country: "" });
     } catch (error) {
-      alert("Failed to submit. ");
+      toast("Failed to submit.");
     }
   };
 
@@ -90,10 +134,10 @@ export function Waitlist() {
   return (
     <section
       id="waitlist-section"
-      className="py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-900"
+      className="relative z-50  py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-900 "
     >
-      <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+      <div className="relative max-w-4xl mx-auto z-50">
+        <div className="text-center mb-16 ">
           <h2 className="text-4xl font-light text-white mb-6">
             Ready to Transform Your Trading?
           </h2>
@@ -101,16 +145,19 @@ export function Waitlist() {
             Join the next generation of quantitative trading. Get early access
             to CapQuant's institutional-grade platform.
           </p>
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/20">
-            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-            <span className="text-green-400 text-sm font-light">
-              Limited Pre-Launch Registration
-            </span>
+          <div className="relative inline-flex items-center space-x-2">
+            <div className="absolute inset-0 bg-black rounded-full border border-black z-10"></div>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-green-500/10 rounded-full border border-green-500/20 z-20">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-green-400 text-sm font-light">
+                Limited Pre-Launch Registration
+              </span>
+            </div>
           </div>
         </div>
 
-        <div className="bg-gray rounded-lg p-8 border border-gray-800">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-black rounded-lg p-8 border border-gray-800 z-50">
+          <form onSubmit={handleSubmit} className=" space-y-6 z-10">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-light text-gray-300 mb-2">
@@ -148,7 +195,7 @@ export function Waitlist() {
                 </div>
               </div>
             </div>
-
+            <Toaster position="bottom-center" closeButton={true} theme="dark" />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-light text-gray-300 mb-2">

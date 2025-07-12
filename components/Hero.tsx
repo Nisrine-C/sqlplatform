@@ -21,11 +21,11 @@ export function Hero() {
           CapQuant is where data-driven expertise generates market-beating performance.
           Submit your predictive models, score their real-time effectiveness, and earn for every validated outperformance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="relative flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="#waitlist-section">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-zinc-200 text-lg px-8 cursor-pointer"
+                className="bg-white text-black hover:bg-zinc-200 text-lg px-8 cursor-pointer z-50 "
               >
                 Join the Waitlist
                 <ArrowRight className="w-5 h-5 ml-2" />

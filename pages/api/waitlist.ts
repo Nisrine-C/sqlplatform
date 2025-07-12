@@ -23,7 +23,7 @@ export default async function handler(
     });
 
     if (existing) {
-      return res.status(400).json({ error: "Email already registered" });
+      return res.status(400).json({ error: "This email already registered" });
     }
 
     const entry = await prisma.waitlistEntry.create({

@@ -24,9 +24,9 @@ export function Features() {
               Everything You Need
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {/* API Integration */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full font-mono">
@@ -71,7 +71,7 @@ export function Features() {
             
 
             {/* AI-Powered Insights */}
-            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden">
+            <div className="bg-zinc-900 rounded-xl border border-zinc-800 overflow-hidden z-10">
               <div className="relative h-48 bg-gradient-to-br from-zinc-800 to-zinc-900 border-b border-zinc-700">
                 <div className="absolute inset-4">
                   <div className="bg-zinc-800 rounded-lg p-4 h-full">

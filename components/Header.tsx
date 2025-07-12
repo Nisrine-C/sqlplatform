@@ -7,13 +7,13 @@ export default function Header() {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold">CapQuant<img src="../public/Caplogo.svg"/></span>
+            <img className="h-15 w-30" src="./Caplogo.svg" />
           </div>
-          <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#waitlist-section">
-            <Button className="bg-white text-black hover:bg-zinc-200 cursor-pointer">
-              Get Started
-            </Button>
+          <nav className="relative hidden md:flex items-center space-x-8">
+            <Link href="#waitlist-section">
+              <Button className="bg-white text-black hover:bg-zinc-200 cursor-pointer z-50">
+                Get Started
+              </Button>
             </Link>
           </nav>
         </div>

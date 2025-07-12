@@ -1,14 +1,14 @@
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Brain } from 'lucide-react';
-import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Brain } from "lucide-react";
+
 export default function StrategyBuilder() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+            <div className="relative">
               <Badge
                 variant="outline"
                 className="border-zinc-700 text-zinc-300 mb-4"
@@ -38,7 +38,7 @@ export default function StrategyBuilder() {
                   Code for Quant, or Drag & Prompt.
                 </li>
               </ul>
-              <Button className="bg-white text-black hover:bg-zinc-200">
+              <Button className="bg-white text-black hover:bg-zinc-200 z-50">
                 Explore CapQuant
               </Button>
             </div>
